@@ -46,8 +46,11 @@ def multiply(x, y):
 
 if __name__=='__main__':
   pool = Pool(processes=4)
-  result = pool.apply_async(mult, (77)) # evaluate "multiply(7, 7)" asynchronously in a single process
+  result = pool.apply_async(mult, (7,7)) # evaluate "multiply(7, 7)" asynchronously in a single process
   print(result.get()) # prints 49
+
+
+
 
 
 
